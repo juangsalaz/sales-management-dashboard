@@ -2,10 +2,10 @@ FROM node:latest AS node
 FROM php:7.1-fpm
 
 # Copy composer.lock and composer.json into the working directory
-COPY composer.lock composer.json /var/www/html/
+COPY composer.lock composer.json /var/www/sales-management/
 
 # Set working directory
-WORKDIR /var/www/html/
+WORKDIR /var/www/sales-management/
 
 # Install dependencies for the operating system software
 RUN apt-get update && apt-get install -y \
