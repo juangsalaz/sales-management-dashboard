@@ -10,7 +10,7 @@ services:
     tty: true
     working_dir: /var/www/sales-management/
     volumes:
-      - ./:/var/www
+      - ./:/var/www/sales-management/
       - ./php/laravel.ini:/usr/local/etc/php/conf.d/laravel.ini
     networks:
       - hdpi-network

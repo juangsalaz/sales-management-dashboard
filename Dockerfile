@@ -35,12 +35,12 @@ RUN docker-php-ext-install gd
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Copy existing application directory contents to the working directory
-COPY . /var/www
+COPY . /var/www/sales-management
 
 # Assign permissions of the working directory to the www-data user
 RUN chown -R www-data:www-data \
-  /var/www/storage \
-  /var/www/bootstrap/cache
+  /var/www/sales-management/storage \
+  /var/www/sales-management/bootstrap/cache
 
 # Expose port 9000 and start php-fpm server (for FastCGI Process Manager)
 EXPOSE 9000
