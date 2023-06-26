@@ -21,7 +21,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "8000:80"
+      - "9000:8080"
     volumes:
       - ./:/var/www/sales-management/
       - ./nginx/conf.d/:/etc/nginx/conf.d/
